@@ -1,11 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
 body{
     font-family: sans-serif;
     margin: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    min-height: 100%;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+h3 {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 p {
@@ -16,6 +34,8 @@ p {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 2fr 4fr;
+    height: 100vh;
+    width: 100vw;
 }
 
 .sidebar {
@@ -25,6 +45,8 @@ p {
     gap: 50px;
     display: grid;
     padding: 20px;
+    align-content: center;
+    align-content: space-between;
 }
 
 .header {
@@ -35,21 +57,35 @@ p {
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    margin-bottom: 10px;
+    padding: 20px;
 }
 
 .projects {
-    grid-row: span 2;
+    display: grid;
+    gap: 10px;
+    margin: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+
 }
 
 .sideitems {
     display: grid;
     justify-content: start;
+    gap: 10px;
 }
 
 .sideitems p {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
+}
+
+.sideitems a {
+    color: white;
 }
 
 .searchbar {
@@ -66,6 +102,8 @@ input[type="search"] {
     border-radius: 10px;
     outline: none;
     color: white;
+    height: 30px;
+    padding: 10px;
 }
 
 .headerleft { /* Grid with 2cols 2rows, img spans 2 rows */
@@ -95,6 +133,7 @@ input[type="search"] {
    justify-items: center;
    gap: 10px;
    margin-right: 20px;
+   margin-top: 10px;
 }
 
 button {
@@ -108,7 +147,39 @@ button {
     height: fit-content;
 }
 
+button:hover {
+    background-color: #bfdbfe;
+}
+
 .main {
     background-color: #bfdbfe;
-    box-shadow: ;
+    box-shadow: inset 0px 7px 5px 0px #3D3D3D;
+    margin-bottom: 0;
+}
+
+.projects div {
+    background-color: white;
+    border-radius: 10px;
+    border-left: 10px solid goldenrod;
+    padding: 10px;
+}
+
+.projectcontainer {
+    grid-row : span 2;
+}
+
+.announcements,
+.trending {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1 fr 1fr 1fr;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.mh-left {
+    margin: 20px;
+    display: grid;
+
 }
