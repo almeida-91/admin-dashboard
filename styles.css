@@ -15,6 +15,7 @@ body{
     grid-row: span 2;
     gap: 50px;
     display: grid;
+    padding: 20px;
 }
 
 .header {
@@ -29,4 +30,30 @@ body{
 
 .projects {
     grid-row: span 2;
+}
+
+.sideitems {
+    display: grid;
+    justify-content: start;
+}
+
+.sideitems p {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.header p {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 30px 0.8fr;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="search"] {
+    background-color: #bfdbfe;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: white;
 }
