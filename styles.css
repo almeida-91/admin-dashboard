@@ -3,6 +3,11 @@ body{
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -16,6 +21,7 @@ body{
     gap: 50px;
     display: grid;
     padding: 20px;
+    font-weight: 700;
 }
 
 .header {
@@ -40,9 +46,10 @@ body{
 .sideitems p {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    align-items: center;
 }
 
-.header p {
+.searchbar {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 30px 0.8fr;
@@ -56,4 +63,32 @@ input[type="search"] {
     border-radius: 10px;
     outline: none;
     color: white;
+}
+
+.headerleft { /* Grid with 2cols 2rows, img spans 2 rows */
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: left;
+    margin-left: 20px;
+}
+
+.headerleft img {
+    grid-row: span 2;
+    justify-self: center;
+    align-self: center;
+    margin-right: 20px;
+}
+
+.headerleft > p {
+    font-weight: 700;
+}
+
+.headerleft > p:first-of-type {
+    font-size: small;
+    align-self: end;
+}
+
+.headerright {
+    
 }
