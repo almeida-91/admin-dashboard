@@ -8,6 +8,10 @@ a {
     color: black;
 }
 
+p {
+    font-weight: 700;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -15,13 +19,12 @@ a {
 }
 
 .sidebar {
-    background-color: cornflowerblue;
+    background-color: #2563eb;
     color: white;
     grid-row: span 2;
     gap: 50px;
     display: grid;
     padding: 20px;
-    font-weight: 700;
 }
 
 .header {
@@ -80,15 +83,32 @@ input[type="search"] {
     margin-right: 20px;
 }
 
-.headerleft > p {
-    font-weight: 700;
-}
-
 .headerleft > p:first-of-type {
     font-size: small;
     align-self: end;
 }
 
-.headerright {
-    
+.headerright {  /* grid with 2rows 1 column */
+   display: grid; 
+   grid-template-rows: 1fr 0.5fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-items: center;
+   gap: 10px;
+   margin-right: 20px;
+}
+
+button {
+    border: none;
+    width: max-content;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    height: fit-content;
+}
+
+.main {
+    background-color: #bfdbfe;
+    box-shadow: ;
 }
