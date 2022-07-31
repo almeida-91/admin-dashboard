@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +8,7 @@
 
 html,
 body{
-    font-family: sans-serif;
+    font-family: 'Poppins',sans-serif;
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -32,7 +34,7 @@ p {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 8fr;
     grid-template-rows: 2fr 4fr;
     height: 100vh;
     width: 100vw;
@@ -80,8 +82,9 @@ p {
 
 .sideitems p {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 50px 1fr;
     align-items: center;
+    justify-content: start;
 }
 
 .sideitems a {
@@ -170,13 +173,16 @@ button:hover {
 
 .announcements,
 .trending {
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1 fr 1fr 1fr;
     background-color: white;
     border-radius: 20px;
     padding: 10px;
+    height: 90%;
+    box-shadow: 5px 5px 29px -19px #000000;
 }
 
 .mh-left {
@@ -188,13 +194,13 @@ button:hover {
 
 .card p {
     font-size: smaller;
-    /* padding: 5px; */
     color: #707070;
 }
 
 .card {
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
+    box-shadow: 5px 5px 29px -19px #000000;
 }
 
 .card div {
@@ -205,4 +211,44 @@ button:hover {
     display: grid;
     grid-auto-flow: column;
     gap: 15px;
+}
+
+.announcements p,
+.trending p {
+    font-size: x-small;
+    color: #707070;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.announcements p {
+    padding-bottom: 5px;
+}
+
+.line {
+    border-bottom: 1px solid #b6b6b6;
+    margin: 10px 5px;
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    background-color: white;
+}
+
+.trending div {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+}
+
+.trending div img {
+    grid-row: span 2;
+    height: 50px;
+    padding: 5px;
+}
+
+.trending div h6 {
+    align-self: end;
+    font-weight: 600;
 }
